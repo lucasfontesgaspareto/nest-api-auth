@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common'
 import { PrismaService } from 'src/database/prisma.service'
 import { CreateUserDto } from './dto/create-user.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
-import { User } from './entities/user.entity'
 
 @Injectable()
 export class UserService {
@@ -32,6 +31,20 @@ export class UserService {
     const user = await this.prisma.user.findUnique({
       where: {
         id,
+      },
+    })
+
+    if (!user) {
+      throw new Error('User does not exist')
+    }
+
+    return user
+  }
+
+  async findByUsername(username: string) {
+    const user = await this.prisma.user.findUnique({
+      where: {
+        username,
       },
     })
 
