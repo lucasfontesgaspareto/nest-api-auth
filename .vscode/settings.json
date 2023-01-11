@@ -1,0 +1,18 @@
+{
+  "prettier.trailingComma": "none",
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.insertPragma": false,
+  "prettier.bracketSameLine": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "editor.tabSize": 2,
+  "editor.foldingStrategy": "indentation",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [80, 120]
+}
